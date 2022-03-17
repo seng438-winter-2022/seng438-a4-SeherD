@@ -1,0 +1,793 @@
+{
+  "id": "3c5dd7b1-ed9c-49e6-b868-2da1b93cf238",
+  "version": "2.0",
+  "name": "SportCheckTest",
+  "url": "https://www.sportchek.ca/",
+  "tests": [{
+    "id": "1fef87dd-75e7-4512-b417-7510ccb1ad1d",
+    "name": "SetStoreCalgary",
+    "commands": [{
+      "id": "4e8d1f8e-76b4-437a-b23f-b1aa4d71fd7c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "51ec8bee-eda5-43b7-a968-e4773fcfb1f5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.header-pickup-store__link-container",
+      "targets": [
+        ["css=.header-pickup-store__link-container", "css:finder"],
+        ["xpath=//div[@id='header-pickup-store-widget']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[6]", "xpath:href"],
+        ["xpath=//div[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f20b288-bf88-4852-9627-dec0b40ca365",
+      "comment": "Check to make sure we can enter a City or Postal Code",
+      "command": "assertText",
+      "target": "css=.pickup-modal-choose__input-legend",
+      "targets": [
+        ["css=.pickup-modal-choose__input-legend", "css:finder"],
+        ["xpath=//section[@id='pickup-store-modal']/form/div/section/div/div/span", "xpath:idRelative"],
+        ["xpath=//section/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'City or Postal Code')]", "xpath:innerText"]
+      ],
+      "value": "City or Postal Code"
+    }, {
+      "id": "e1643b0f-c51d-4694-8676-33695e37a2d7",
+      "comment": "",
+      "command": "click",
+      "target": "id=pickup-modal-choose__input",
+      "targets": [
+        ["id=pickup-modal-choose__input", "id"],
+        ["name=location", "name"],
+        ["css=#pickup-modal-choose__input", "css:finder"],
+        ["xpath=//input[@id='pickup-modal-choose__input']", "xpath:attributes"],
+        ["xpath=//section[@id='pickup-store-modal']/form/div/section/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b396c6c-2a90-4ba0-8f33-2c45eae5f2f8",
+      "comment": "",
+      "command": "type",
+      "target": "id=pickup-modal-choose__input",
+      "targets": [
+        ["id=pickup-modal-choose__input", "id"],
+        ["name=location", "name"],
+        ["css=#pickup-modal-choose__input", "css:finder"],
+        ["xpath=//input[@id='pickup-modal-choose__input']", "xpath:attributes"],
+        ["xpath=//section[@id='pickup-store-modal']/form/div/section/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "T2N4V5"
+    }, {
+      "id": "9b9e3d35-7b95-44b7-acb2-f5edb998eab9",
+      "comment": "Check to make sure its looking for the right postal code",
+      "command": "assertText",
+      "target": "css=.pickup-modal-choose__summary-text:nth-child(2)",
+      "targets": [
+        ["css=.pickup-modal-choose__summary-text:nth-child(2)", "css:finder"],
+        ["xpath=//section[@id='pickup-store-modal']/form/div/section/div[2]/div/span[2]", "xpath:idRelative"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'T2N 4V5')]", "xpath:innerText"]
+      ],
+      "value": "CALGARY, AB"
+    }, {
+      "id": "3656a371-d3e7-4555-8503-736637d37326",
+      "comment": "Make sure we can set this as our store (button exists).",
+      "command": "assertElementPresent",
+      "target": "css=.pickup-store-list__item:nth-child(2) > .pickup-store-list__default-store",
+      "targets": [
+        ["css=.pickup-store-list__item:nth-child(2) > .pickup-store-list__default-store", "css:finder"],
+        ["xpath=//a[contains(text(),'Set as my store')]", "xpath:link"],
+        ["xpath=//section[@id='pickup-store-modal']/form/div/section[3]/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e696702f-1554-4017-9627-06bef72ef390",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pickup-modal-choose__submit",
+      "targets": [
+        ["css=.pickup-modal-choose__submit", "css:finder"],
+        ["xpath=//input[@type='submit']", "xpath:attributes"],
+        ["xpath=//section[@id='pickup-store-modal']/form/div/section/div/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d7204b2-7472-4f79-a94e-552b9982522d",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.pickup-modal-choose__submit",
+      "targets": [
+        ["css=.pickup-modal-choose__submit", "css:finder"],
+        ["xpath=//input[@type='submit']", "xpath:attributes"],
+        ["xpath=//section[@id='pickup-store-modal']/form/div/section/div/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "20e4a514-5032-4780-829a-5c508f919965",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.pickup-modal-choose__submit",
+      "targets": [
+        ["css=.pickup-modal-choose__submit", "css:finder"],
+        ["xpath=//input[@type='submit']", "xpath:attributes"],
+        ["xpath=//section[@id='pickup-store-modal']/form/div/section/div/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c807728-ac1d-4d14-bd60-532470252958",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pickup-store-list__item:nth-child(2) > .pickup-store-list__default-store",
+      "targets": [
+        ["css=.pickup-store-list__item:nth-child(2) > .pickup-store-list__default-store", "css:finder"],
+        ["xpath=//a[contains(text(),'Set as my store')]", "xpath:link"],
+        ["xpath=//section[@id='pickup-store-modal']/form/div/section[3]/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "0a822176-7eb7-4685-9af3-8b8955f5614e",
+    "name": "SearchWomensShoes",
+    "commands": [{
+      "id": "80c91c4d-1281-4767-86fa-b00b451571d4",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d1b4d47c-e54f-4266-8a47-bd48e64e809f",
+      "comment": "Check to make sure search bar exists.",
+      "command": "assertElementPresent",
+      "target": "css=.header-search__input",
+      "targets": [
+        ["css=.header-search__input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f843c38-b6f8-46f1-92cf-06679a2389c2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.header-search__input",
+      "targets": [
+        ["css=.header-search__input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b4e9792-edec-4f41-a4be-75229accec7f",
+      "comment": "",
+      "command": "type",
+      "target": "css=.header-search__input",
+      "targets": [
+        ["css=.header-search__input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "nike womens running shoe"
+    }, {
+      "id": "a707a6f0-fb30-4388-a4b5-4cd21b411876",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=.header-search__input",
+      "targets": [
+        ["css=.header-search__input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "8fcc80e7-b98e-4737-a5b3-b10397a67f3b",
+      "comment": "Check to make sure the search results are returned.",
+      "command": "assertText",
+      "target": "id=global-page-header__title",
+      "targets": [],
+      "value": "SEARCH RESULTS: NIKE WOMENS RUNNING SHOE"
+    }]
+  }, {
+    "id": "1bc8791e-22fc-43b9-b92f-140f32ba60a6",
+    "name": "MailingListSignupCalgary",
+    "commands": [{
+      "id": "320941c0-9430-4c9f-881c-54206a2b6bdf",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.sportchek.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bf859931-ec8d-41e0-96b3-e80752bee624",
+      "comment": "Make sure there is a sign-up button we can press",
+      "command": "assertElementPresent",
+      "target": "css=.enterprise-header__section:nth-child(3) a:nth-child(1) > font",
+      "targets": [
+        ["css=.enterprise-header__section:nth-child(3) a:nth-child(1) > font", "css:finder"],
+        ["xpath=//div[3]/div/div/a/font", "xpath:position"],
+        ["xpath=//font[contains(.,'Sign Up For Our Mailing List To Get 10% Off!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e961ef8-bc26-4bc6-ae73-90cf30277cb6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.enterprise-header__section:nth-child(3) a:nth-child(1) > font",
+      "targets": [
+        ["css=.enterprise-header__section:nth-child(3) a:nth-child(1) > font", "css:finder"],
+        ["xpath=//div[3]/div/div/a/font", "xpath:position"],
+        ["xpath=//font[contains(.,'Sign Up For Our Mailing List To Get 10% Off!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a88c590-a94d-4117-bde9-62cc76fc0b2b",
+      "comment": "Make sure there is a filed for email",
+      "command": "assertElementPresent",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.sign-up__input-wrapper:nth-child(2) .label-set__text-field", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//form[@id='sign-up-form']/div/label/div/input", "xpath:idRelative"],
+        ["xpath=//label/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "990d370d-b53a-428d-ac4a-e8ef3ff1e9ab",
+      "comment": "Make sure there is a filed for postal code",
+      "command": "assertElementPresent",
+      "target": "name=postalCode",
+      "targets": [
+        ["css=.enterprise-header__section:nth-child(3) a:nth-child(1) > font", "css:finder"],
+        ["xpath=//div[3]/div/div/a/font", "xpath:position"],
+        ["xpath=//font[contains(.,'Sign Up For Our Mailing List To Get 10% Off!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "51d27cc0-09e6-4908-90d3-26286b3833f1",
+      "comment": "Make sure there is a filed for first name",
+      "command": "assertElementPresent",
+      "target": "name=firstName",
+      "targets": [
+        ["css=.enterprise-header__section:nth-child(3) a:nth-child(1) > font", "css:finder"],
+        ["xpath=//div[3]/div/div/a/font", "xpath:position"],
+        ["xpath=//font[contains(.,'Sign Up For Our Mailing List To Get 10% Off!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c6606e77-0299-4292-9fc0-b957783846ac",
+      "comment": "Make sure there is a filed for last name",
+      "command": "assertElementPresent",
+      "target": "name=lastName",
+      "targets": [
+        ["css=.enterprise-header__section:nth-child(3) a:nth-child(1) > font", "css:finder"],
+        ["xpath=//div[3]/div/div/a/font", "xpath:position"],
+        ["xpath=//font[contains(.,'Sign Up For Our Mailing List To Get 10% Off!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "68a0aa6c-99ce-43a0-910c-f1e465436674",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.sign-up__input-wrapper:nth-child(2) .label-set__text-field", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//form[@id='sign-up-form']/div/label/div/input", "xpath:idRelative"],
+        ["xpath=//label/div/input", "xpath:position"]
+      ],
+      "value": "yanortoraz@gmail.com"
+    }, {
+      "id": "91490078-40d9-406a-8488-a32432b2ae8c",
+      "comment": "",
+      "command": "type",
+      "target": "name=postalCode",
+      "targets": [],
+      "value": "T2N 4V5"
+    }, {
+      "id": "bde314c6-9ada-4988-bd5d-148230a5539c",
+      "comment": "",
+      "command": "type",
+      "target": "name=firstName",
+      "targets": [
+        ["name=firstName", "name"],
+        ["css=.sign-up__input-wrapper:nth-child(4) .label-set__text-field", "css:finder"],
+        ["xpath=//input[@name='firstName']", "xpath:attributes"],
+        ["xpath=//form[@id='sign-up-form']/div[3]/label/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/label/div/input", "xpath:position"]
+      ],
+      "value": "Yanor"
+    }, {
+      "id": "a5338b5a-4273-44c3-9b50-7207999483d3",
+      "comment": "",
+      "command": "type",
+      "target": "name=lastName",
+      "targets": [
+        ["name=lastName", "name"],
+        ["css=.sign-up__input-wrapper:nth-child(5) .label-set__text-field", "css:finder"],
+        ["xpath=//input[@name='lastName']", "xpath:attributes"],
+        ["xpath=//form[@id='sign-up-form']/div[4]/label/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/label/div/input", "xpath:position"]
+      ],
+      "value": "Toraz"
+    }, {
+      "id": "4fbc6cca-fb25-474d-99ff-45594120b3f4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.checkbox",
+      "targets": [
+        ["css=.checkbox", "css:finder"],
+        ["xpath=//form[@id='sign-up-form']/div[5]/label/span[2]", "xpath:idRelative"],
+        ["xpath=//div[5]/label/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee0d40b4-c9c7-4fad-9c33-1a9f480af205",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sign-up__submit",
+      "targets": [
+        ["css=.sign-up__submit", "css:finder"],
+        ["xpath=//input[@value='Sign me up']", "xpath:attributes"],
+        ["xpath=//form[@id='sign-up-form']/div[6]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aedbd547-f88e-4a41-b2e2-99850b88410f",
+      "comment": "Make sure signup is a success!",
+      "command": "assertElementPresent",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "ca91101e-6d0e-413a-9c57-f80402fbec9c",
+    "name": "MailingListSignupToronto",
+    "commands": [{
+      "id": "96031f58-4326-48c8-a6ac-6a697eea058a",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.sportchek.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "32ffb932-758d-46a2-bd5f-1230a7d40cd1",
+      "comment": "Make sure there is a sign-up button we can press",
+      "command": "assertElementPresent",
+      "target": "css=.enterprise-header__section:nth-child(3) a:nth-child(1) > font",
+      "targets": [
+        ["css=.enterprise-header__section:nth-child(3) a:nth-child(1) > font", "css:finder"],
+        ["xpath=//div[3]/div/div/a/font", "xpath:position"],
+        ["xpath=//font[contains(.,'Sign Up For Our Mailing List To Get 10% Off!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff54ae47-322a-46bf-9eee-add18b8b133c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.enterprise-header__section:nth-child(3) a:nth-child(1) > font",
+      "targets": [
+        ["css=.enterprise-header__section:nth-child(3) a:nth-child(1) > font", "css:finder"],
+        ["xpath=//div[3]/div/div/a/font", "xpath:position"],
+        ["xpath=//font[contains(.,'Sign Up For Our Mailing List To Get 10% Off!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d61a3a17-3431-470c-bb97-d2382f2c85ba",
+      "comment": "Make sure there is a filed for email",
+      "command": "assertElementPresent",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.sign-up__input-wrapper:nth-child(2) .label-set__text-field", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//form[@id='sign-up-form']/div/label/div/input", "xpath:idRelative"],
+        ["xpath=//label/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "af768733-0e3a-4478-a43f-1b9098f35d66",
+      "comment": "Make sure there is a filed for postal code",
+      "command": "assertElementPresent",
+      "target": "name=postalCode",
+      "targets": [
+        ["css=.enterprise-header__section:nth-child(3) a:nth-child(1) > font", "css:finder"],
+        ["xpath=//div[3]/div/div/a/font", "xpath:position"],
+        ["xpath=//font[contains(.,'Sign Up For Our Mailing List To Get 10% Off!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a392a94c-a586-4ac6-bc0d-d017d7cf5817",
+      "comment": "Make sure there is a filed for first name",
+      "command": "assertElementPresent",
+      "target": "name=firstName",
+      "targets": [
+        ["css=.enterprise-header__section:nth-child(3) a:nth-child(1) > font", "css:finder"],
+        ["xpath=//div[3]/div/div/a/font", "xpath:position"],
+        ["xpath=//font[contains(.,'Sign Up For Our Mailing List To Get 10% Off!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea5de00f-7e6f-4afb-b72e-7e67feda94aa",
+      "comment": "Make sure there is a filed for last name",
+      "command": "assertElementPresent",
+      "target": "name=lastName",
+      "targets": [
+        ["css=.enterprise-header__section:nth-child(3) a:nth-child(1) > font", "css:finder"],
+        ["xpath=//div[3]/div/div/a/font", "xpath:position"],
+        ["xpath=//font[contains(.,'Sign Up For Our Mailing List To Get 10% Off!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e86cf01f-1196-4bae-96be-4b2e53614fac",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.sign-up__input-wrapper:nth-child(2) .label-set__text-field", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//form[@id='sign-up-form']/div/label/div/input", "xpath:idRelative"],
+        ["xpath=//label/div/input", "xpath:position"]
+      ],
+      "value": "yanortoraz@gmail.com"
+    }, {
+      "id": "67de5d58-9cbb-4aac-9636-a9b82b31554e",
+      "comment": "",
+      "command": "type",
+      "target": "name=postalCode",
+      "targets": [],
+      "value": "M5K 1A2"
+    }, {
+      "id": "a0298302-78ed-4835-aab0-24af0ee071a4",
+      "comment": "",
+      "command": "type",
+      "target": "name=firstName",
+      "targets": [
+        ["name=firstName", "name"],
+        ["css=.sign-up__input-wrapper:nth-child(4) .label-set__text-field", "css:finder"],
+        ["xpath=//input[@name='firstName']", "xpath:attributes"],
+        ["xpath=//form[@id='sign-up-form']/div[3]/label/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/label/div/input", "xpath:position"]
+      ],
+      "value": "Yanor"
+    }, {
+      "id": "e83b20b6-5538-4132-a2b7-69ed38edc358",
+      "comment": "",
+      "command": "type",
+      "target": "name=lastName",
+      "targets": [
+        ["name=lastName", "name"],
+        ["css=.sign-up__input-wrapper:nth-child(5) .label-set__text-field", "css:finder"],
+        ["xpath=//input[@name='lastName']", "xpath:attributes"],
+        ["xpath=//form[@id='sign-up-form']/div[4]/label/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/label/div/input", "xpath:position"]
+      ],
+      "value": "Toraz"
+    }, {
+      "id": "1842dbd0-a502-481b-a72b-69be399732ed",
+      "comment": "",
+      "command": "click",
+      "target": "css=.checkbox",
+      "targets": [
+        ["css=.checkbox", "css:finder"],
+        ["xpath=//form[@id='sign-up-form']/div[5]/label/span[2]", "xpath:idRelative"],
+        ["xpath=//div[5]/label/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e0c59723-412d-4895-bca9-1ebeb3981fd8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sign-up__submit",
+      "targets": [
+        ["css=.sign-up__submit", "css:finder"],
+        ["xpath=//input[@value='Sign me up']", "xpath:attributes"],
+        ["xpath=//form[@id='sign-up-form']/div[6]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1ef5812-1941-413b-a404-1e1c55e60efd",
+      "comment": "Make sure signup is a success!",
+      "command": "assertElementPresent",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "579377b6-dd38-456b-b76c-4c5f4aa52f88",
+    "name": "SearchMensShoes",
+    "commands": [{
+      "id": "5b143a62-186b-43d3-b4cb-6179b1ddba2d",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf74bcce-7e09-40c4-ab9d-50128aa52935",
+      "comment": "Check to make sure search bar exists.",
+      "command": "assertElementPresent",
+      "target": "css=.header-search__input",
+      "targets": [
+        ["css=.header-search__input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "83d7189a-76a8-49de-82a0-ba4119f63340",
+      "comment": "",
+      "command": "click",
+      "target": "css=.header-search__input",
+      "targets": [
+        ["css=.header-search__input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "616f7172-a16d-45f8-b179-5f990d175990",
+      "comment": "",
+      "command": "type",
+      "target": "css=.header-search__input",
+      "targets": [
+        ["css=.header-search__input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "nike mens running shoe"
+    }, {
+      "id": "4dffcf07-0f3a-4d33-9a6d-9b8b582c3498",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=.header-search__input",
+      "targets": [
+        ["css=.header-search__input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "bb051e00-e328-433a-a6ee-7d96a16e0e55",
+      "comment": "Check to make sure the search results are returned.",
+      "command": "assertText",
+      "target": "id=global-page-header__title",
+      "targets": [],
+      "value": "SEARCH RESULTS: NIKE MENS RUNNING SHOE"
+    }]
+  }, {
+    "id": "7f3dd044-8253-4e5c-b075-e8bf149e115b",
+    "name": "SearchMensPants",
+    "commands": [{
+      "id": "a41ff47f-4983-40fc-99a8-d876c8063c95",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "67d43ff9-6d44-4e9e-97f2-91d9bc828ce8",
+      "comment": "Check to make sure search bar exists.",
+      "command": "assertElementPresent",
+      "target": "css=.header-search__input",
+      "targets": [
+        ["css=.header-search__input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "809dd490-a10f-4e54-9777-123127113c67",
+      "comment": "",
+      "command": "click",
+      "target": "css=.header-search__input",
+      "targets": [
+        ["css=.header-search__input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "704ed08a-2741-4fb1-aa65-20f83f769d95",
+      "comment": "",
+      "command": "type",
+      "target": "css=.header-search__input",
+      "targets": [
+        ["css=.header-search__input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "mens pants"
+    }, {
+      "id": "2217977a-0fd5-4baa-b4db-ec92cb4bf6f7",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=.header-search__input",
+      "targets": [
+        ["css=.header-search__input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "1870e19a-47ea-4595-a747-f2f5a2a3dd66",
+      "comment": "Check to make sure the search results are returned.",
+      "command": "assertText",
+      "target": "id=global-page-header__title",
+      "targets": [],
+      "value": "SEARCH RESULTS: MENS PANTS"
+    }]
+  }, {
+    "id": "c9e508ba-c405-4ae1-87e3-6d135eb760a9",
+    "name": "SetStoreToronto",
+    "commands": [{
+      "id": "ea0fb06a-ef59-4286-bb3e-dade60a0577f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6b5046c1-b9d2-4356-9a9e-bf0d679d4892",
+      "comment": "",
+      "command": "click",
+      "target": "css=.header-pickup-store__link-container",
+      "targets": [
+        ["css=.header-pickup-store__link-container", "css:finder"],
+        ["xpath=//div[@id='header-pickup-store-widget']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[6]", "xpath:href"],
+        ["xpath=//div[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "44e66281-7c76-4eb4-b446-79f119654cc6",
+      "comment": "Check to make sure we can enter a City or Postal Code",
+      "command": "assertText",
+      "target": "css=.pickup-modal-choose__input-legend",
+      "targets": [
+        ["css=.pickup-modal-choose__input-legend", "css:finder"],
+        ["xpath=//section[@id='pickup-store-modal']/form/div/section/div/div/span", "xpath:idRelative"],
+        ["xpath=//section/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'City or Postal Code')]", "xpath:innerText"]
+      ],
+      "value": "City or Postal Code"
+    }, {
+      "id": "d20dc12a-1915-4d5c-b10b-c444eabce7d0",
+      "comment": "",
+      "command": "click",
+      "target": "id=pickup-modal-choose__input",
+      "targets": [
+        ["id=pickup-modal-choose__input", "id"],
+        ["name=location", "name"],
+        ["css=#pickup-modal-choose__input", "css:finder"],
+        ["xpath=//input[@id='pickup-modal-choose__input']", "xpath:attributes"],
+        ["xpath=//section[@id='pickup-store-modal']/form/div/section/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b89f374a-6540-41e5-adba-4958430a766c",
+      "comment": "",
+      "command": "type",
+      "target": "id=pickup-modal-choose__input",
+      "targets": [
+        ["id=pickup-modal-choose__input", "id"],
+        ["name=location", "name"],
+        ["css=#pickup-modal-choose__input", "css:finder"],
+        ["xpath=//input[@id='pickup-modal-choose__input']", "xpath:attributes"],
+        ["xpath=//section[@id='pickup-store-modal']/form/div/section/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "M5P 2B8"
+    }, {
+      "id": "52c2bd28-7871-48ec-9b4c-3e67e274fdf0",
+      "comment": "Check to make sure its looking for the right postal code",
+      "command": "assertText",
+      "target": "css=.pickup-modal-choose__summary-text:nth-child(2)",
+      "targets": [
+        ["css=.pickup-modal-choose__summary-text:nth-child(2)", "css:finder"],
+        ["xpath=//section[@id='pickup-store-modal']/form/div/section/div[2]/div/span[2]", "xpath:idRelative"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'T2N 4V5')]", "xpath:innerText"]
+      ],
+      "value": "CALGARY, AB"
+    }, {
+      "id": "f7847013-d633-4931-ae82-a9cd30c15e39",
+      "comment": "Make sure we can set this as our store (button exists).",
+      "command": "assertElementPresent",
+      "target": "css=.pickup-store-list__item:nth-child(2) > .pickup-store-list__default-store",
+      "targets": [
+        ["css=.pickup-store-list__item:nth-child(2) > .pickup-store-list__default-store", "css:finder"],
+        ["xpath=//a[contains(text(),'Set as my store')]", "xpath:link"],
+        ["xpath=//section[@id='pickup-store-modal']/form/div/section[3]/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cba12d0d-26fa-4a97-bcef-39d5ef4cfa9c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pickup-modal-choose__submit",
+      "targets": [
+        ["css=.pickup-modal-choose__submit", "css:finder"],
+        ["xpath=//input[@type='submit']", "xpath:attributes"],
+        ["xpath=//section[@id='pickup-store-modal']/form/div/section/div/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5ca31443-a618-489b-809d-67c58aca3218",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.pickup-modal-choose__submit",
+      "targets": [
+        ["css=.pickup-modal-choose__submit", "css:finder"],
+        ["xpath=//input[@type='submit']", "xpath:attributes"],
+        ["xpath=//section[@id='pickup-store-modal']/form/div/section/div/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "80879f28-4491-46bb-ad36-3ea75ca11cee",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.pickup-modal-choose__submit",
+      "targets": [
+        ["css=.pickup-modal-choose__submit", "css:finder"],
+        ["xpath=//input[@type='submit']", "xpath:attributes"],
+        ["xpath=//section[@id='pickup-store-modal']/form/div/section/div/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f53bbfb-45df-43c7-9287-74b061e68293",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pickup-store-list__item:nth-child(2) > .pickup-store-list__default-store",
+      "targets": [
+        ["css=.pickup-store-list__item:nth-child(2) > .pickup-store-list__default-store", "css:finder"],
+        ["xpath=//a[contains(text(),'Set as my store')]", "xpath:link"],
+        ["xpath=//section[@id='pickup-store-modal']/form/div/section[3]/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "d575c4be-06de-4b2b-8b99-7a1dab70e768",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.sportchek.ca/", "https://www.sportchek.ca/categories/shop-by-sport/running/running-shoes/product/asics-womens-gel-cumulus-22-running-shoes-comfortable-mesh-333161573.html?_br_psugg_q=womens+running+shoes", "https://www.sportchek.ca/categories/shop-by-sport/snowboarding/ski-snowboard-pants/kids/product/ripzone-boys-rowe-insulated-pants-color-333441640_40-333441607.html#333441640=333441643", "https://www.sportchek.ca/shopping-cart.html", "https://www.sportchek.ca/categories/women/activewear/sports-bras/womens-low-support-sports-bras/product/alo-womens-airlift-intrigue-sports-bra-color-333403952_01-333403952.html#333403952%5Bcolor%5D=333403952_01"],
+  "plugins": []
+}
