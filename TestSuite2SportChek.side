@@ -1,0 +1,868 @@
+{
+  "id": "6e9522dd-8a50-4447-9b52-8a60906681cf",
+  "version": "2.0",
+  "name": "TestSuite2SportChek ",
+  "url": "https://www.sportchek.ca/",
+  "tests": [{
+    "id": "6898af86-e67b-4c85-84d4-ed01c88e5e37",
+    "name": "invalidSignInNoEmail",
+    "commands": [{
+      "id": "b868c110-4a6e-4220-b2b2-732777f48ded",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.sportchek.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f7ae6316-a3af-40cc-8f40-a727d612465c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1595x921",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e71cfb6-2776-4273-ac8b-15e92e372da2",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=headerPickupStoreName",
+      "targets": [
+        ["id=headerPickupStoreName", "id"],
+        ["css=#headerPickupStoreName", "css:finder"],
+        ["xpath=//span[@id='headerPickupStoreName']", "xpath:attributes"],
+        ["xpath=//div[@id='header-pickup-store-widget']/a/span[3]", "xpath:idRelative"],
+        ["xpath=//a/span[3]", "xpath:position"],
+        ["xpath=//span[contains(.,'Southtrail Crossing Sport Chek')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4821c466-7f19-412e-818a-8b01b8bb4ea6",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=headerPickupStoreName",
+      "targets": [
+        ["id=headerPickupStoreName", "id"],
+        ["css=#headerPickupStoreName", "css:finder"],
+        ["xpath=//span[@id='headerPickupStoreName']", "xpath:attributes"],
+        ["xpath=//div[@id='header-pickup-store-widget']/a/span[3]", "xpath:idRelative"],
+        ["xpath=//a/span[3]", "xpath:position"],
+        ["xpath=//span[contains(.,'Southtrail Crossing Sport Chek')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "100aa268-3d03-4485-953e-5c7c2dfe5bae",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.header-pickup-store__link-container",
+      "targets": [
+        ["css=.header-pickup-store__link-container", "css:finder"],
+        ["xpath=//div[@id='header-pickup-store-widget']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[6]", "xpath:href"],
+        ["xpath=//div[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Your Store:\nSouthtrail Crossing Sport Chek')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "57bde466-f66a-4554-9364-61d5e35c0031",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.header-pickup-store__link-container",
+      "targets": [
+        ["css=.header-pickup-store__link-container", "css:finder"],
+        ["xpath=//div[@id='header-pickup-store-widget']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[6]", "xpath:href"],
+        ["xpath=//div[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Your Store:\nSouthtrail Crossing Sport Chek')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "434e4fbc-72d3-4d68-96aa-e01584f851be",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.header-cart__text",
+      "targets": [
+        ["css=.header-cart__text", "css:finder"],
+        ["xpath=//div[6]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3dc62992-c4d0-482a-aad2-fff8dda12541",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.header-cart__text",
+      "targets": [
+        ["css=.header-cart__text", "css:finder"],
+        ["xpath=//div[6]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb069c0a-0259-4ddb-9eb5-0a4e589fec7d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.enterprise-account__button_sign-in",
+      "targets": [
+        ["css=.enterprise-account__button_sign-in", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e358cb28-8175-437d-9d48-a71e4f5e996d",
+      "comment": "Check to see if the Sign In page header is visible on the page",
+      "command": "assertText",
+      "target": "css=#gigya-login-form .gigya-composite-control-header",
+      "targets": [
+        ["css=#gigya-login-form .gigya-composite-control-header", "css:finder"],
+        ["xpath=//form[@id='gigya-login-form']/div[2]/div[3]/h2", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/div[2]/div[3]/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Triangle ID Sign In')]", "xpath:innerText"]
+      ],
+      "value": "Triangle ID Sign In"
+    }, {
+      "id": "8e866c57-cec5-4ab3-bd53-95bcc3851a91",
+      "comment": "",
+      "command": "click",
+      "target": "css=#gigya-login-form .gigya-input-text",
+      "targets": [
+        ["css=#gigya-login-form .gigya-input-text", "css:finder"],
+        ["xpath=(//input[@name='username'])[4]", "xpath:attributes"],
+        ["xpath=//form[@id='gigya-login-form']/div[2]/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/div[2]/div[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "498a8e92-a040-4779-bcbd-aacd96554d80",
+      "comment": "",
+      "command": "type",
+      "target": "css=.gigya-input-password:nth-child(2)",
+      "targets": [
+        ["css=.gigya-input-password:nth-child(2)", "css:finder"],
+        ["xpath=(//input[@name='password'])[6]", "xpath:attributes"],
+        ["xpath=//form[@id='gigya-login-form']/div[2]/div[3]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/div[2]/div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "hithere"
+    }, {
+      "id": "346956e9-6a4f-4f37-a132-78d510f044b0",
+      "comment": "",
+      "command": "click",
+      "target": "css=#gigya-login-form .gigya-composite-control-submit > .gigya-input-submit",
+      "targets": [
+        ["css=#gigya-login-form .gigya-composite-control-submit > .gigya-input-submit", "css:finder"],
+        ["xpath=//input[@value='SIGN IN']", "xpath:attributes"],
+        ["xpath=//form[@id='gigya-login-form']/div[2]/div[3]/div[5]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/div[2]/div[3]/div[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4bee56c5-275b-4c8f-95fb-553739b3be7f",
+      "comment": "Check that error message pops up letting user know that an email must be inputted",
+      "command": "assertText",
+      "target": "css=.gigya-error-msg-active",
+      "targets": [
+        ["css=.gigya-error-msg-active", "css:finder"],
+        ["xpath=//form[@id='gigya-login-form']/div[2]/div[3]/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/div[2]/div[3]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'This field is required.')]", "xpath:innerText"]
+      ],
+      "value": "This field is required."
+    }, {
+      "id": "d43a9498-161e-4c79-a89f-9463d1352cf2",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#gigya-login-form .gigya-composite-control-submit > .gigya-input-submit",
+      "targets": [
+        ["css=#gigya-login-form .gigya-composite-control-submit > .gigya-input-submit", "css:finder"],
+        ["xpath=//input[@value='SIGN IN']", "xpath:attributes"],
+        ["xpath=//form[@id='gigya-login-form']/div[2]/div[3]/div[5]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/div[2]/div[3]/div[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8bd60072-2a3d-461e-8236-3f32231f20fa",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=#gigya-login-form .gigya-composite-control-submit > .gigya-input-submit",
+      "targets": [
+        ["css=#gigya-login-form .gigya-composite-control-submit > .gigya-input-submit", "css:finder"],
+        ["xpath=//input[@value='SIGN IN']", "xpath:attributes"],
+        ["xpath=//form[@id='gigya-login-form']/div[2]/div[3]/div[5]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/form/div[2]/div[3]/div[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "621f0f33-ae1f-4780-98d4-8c99f77bfe9c",
+    "name": "homePageLogo",
+    "commands": [{
+      "id": "74fbb4be-bca7-4d64-93a5-7dfc2e94c954",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.sportchek.ca/categories/fan-shop/nhl/seattle-kraken.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8abf16f4-cfb3-4511-901f-5287b48fafb0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1595x921",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c73a9205-3454-4533-bc3f-a9a6b41f6cb5",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=headerPickupStoreTitle",
+      "targets": [
+        ["id=headerPickupStoreTitle", "id"],
+        ["css=#headerPickupStoreTitle", "css:finder"],
+        ["xpath=//span[@id='headerPickupStoreTitle']", "xpath:attributes"],
+        ["xpath=//div[@id='header-pickup-store-widget']/a/span[2]", "xpath:idRelative"],
+        ["xpath=//a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Your Store:')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "02d9759a-403b-46ea-b549-280d215cbef1",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=headerPickupStoreTitle",
+      "targets": [
+        ["id=headerPickupStoreTitle", "id"],
+        ["css=#headerPickupStoreTitle", "css:finder"],
+        ["xpath=//span[@id='headerPickupStoreTitle']", "xpath:attributes"],
+        ["xpath=//div[@id='header-pickup-store-widget']/a/span[2]", "xpath:idRelative"],
+        ["xpath=//a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Your Store:')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa33a1c3-fe8f-4d75-834d-f124cf0e2423",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.header-search__submit",
+      "targets": [
+        ["css=.header-search__submit", "css:finder"],
+        ["xpath=//input[@value='SEARCH']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc5fed4d-016e-40c1-874d-593190964785",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.header-search__submit",
+      "targets": [
+        ["css=.header-search__submit", "css:finder"],
+        ["xpath=//input[@value='SEARCH']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ad0af6df-88b8-41c2-9565-5d871b402364",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Sport Chek",
+      "targets": [
+        ["linkText=Sport Chek", "linkText"],
+        ["css=.header-logo__image", "css:finder"],
+        ["xpath=//a[contains(text(),'Sport Chek')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/')])[9]", "xpath:href"],
+        ["xpath=//header/div[2]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "02ec0ca7-7ec2-4dd6-b735-804a9446649b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sport Chek",
+      "targets": [
+        ["linkText=Sport Chek", "linkText"],
+        ["css=.header-logo__image", "css:finder"],
+        ["xpath=//a[contains(text(),'Sport Chek')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/')])[9]", "xpath:href"],
+        ["xpath=//header/div[2]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f121c079-8e47-4f0d-8ec7-ebb62299dd21",
+      "comment": "Check that the Sport Chek homepage logo is present",
+      "command": "assertElementPresent",
+      "target": "linkText=Sport Chek",
+      "targets": [
+        ["linkText=Sport Chek", "linkText"],
+        ["css=.header-logo__image", "css:finder"],
+        ["xpath=//a[contains(text(),'Sport Chek')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/')])[6]", "xpath:href"],
+        ["xpath=//header/div[2]/div/div/a", "xpath:position"]
+      ],
+      "value": "Sport Chek"
+    }, {
+      "id": "71561e4b-c2eb-4576-82d5-5f61063cc276",
+      "comment": "Asser the Under Armor Joy of Training Image is present",
+      "command": "assertElementPresent",
+      "target": "css=.full-image__img > img",
+      "targets": [
+        ["css=.full-image__img > img", "css:finder"],
+        ["xpath=//img[@alt='Under Armour Presents: The Joy of Training. Shop Now.']", "xpath:img"],
+        ["xpath=//main[@id='main-content']/div/div[2]/div/a/span/picture/img", "xpath:idRelative"],
+        ["xpath=//picture/img", "xpath:position"]
+      ],
+      "value": "The Joy of Training"
+    }, {
+      "id": "cf9e4c78-0d0e-4e01-8984-62e6caf5fa31",
+      "comment": "Verifiy that the Hompage tool button is visible",
+      "command": "assertText",
+      "target": "css=.page-nav__item:nth-child(3) .main-menu__text",
+      "targets": [
+        ["css=.page-nav__item:nth-child(3) .main-menu__text", "css:finder"],
+        ["xpath=//li[3]/a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Women')]", "xpath:innerText"]
+      ],
+      "value": "Women"
+    }]
+  }, {
+    "id": "7e6a90df-61f6-4211-a330-0fdef26e93c7",
+    "name": "customerServiceLink",
+    "commands": [{
+      "id": "5fd0a8ef-524d-4ec9-b7dd-4ef11b181803",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.sportchek.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d381a9ec-c418-4ab3-9396-b96baab07168",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1595x922",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3ddf58b4-c4aa-4116-adb6-4d3079ae6b85",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Wellness",
+      "targets": [
+        ["linkText=Wellness", "linkText"],
+        ["css=.page-nav__item:nth-child(10) > .page-nav__link", "css:finder"],
+        ["xpath=//a[contains(@href, 'categories/wellness')]", "xpath:href"],
+        ["xpath=//li[10]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Wellness')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "44abe7f9-70e5-4dc3-bb52-addc13deba3f",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Wellness",
+      "targets": [
+        ["linkText=Wellness", "linkText"],
+        ["css=.page-nav__item:nth-child(10) > .page-nav__link", "css:finder"],
+        ["xpath=//a[contains(@href, 'categories/wellness')]", "xpath:href"],
+        ["xpath=//li[10]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Wellness')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "be5e9466-f7d6-4228-aaf1-1bad842a1c33",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Jerseys & Fan Wear",
+      "targets": [
+        ["linkText=Jerseys & Fan Wear", "linkText"],
+        ["css=.page-nav__item:nth-child(9) > .page-nav__link", "css:finder"],
+        ["xpath=//a[contains(@href, 'categories/fan-shop')]", "xpath:href"],
+        ["xpath=//li[9]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Jerseys & Fan Wear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0697aab4-7f29-4dd0-ba4a-26946cb66ac1",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Jerseys & Fan Wear",
+      "targets": [
+        ["linkText=Jerseys & Fan Wear", "linkText"],
+        ["css=.page-nav__item:nth-child(9) > .page-nav__link", "css:finder"],
+        ["xpath=//a[contains(@href, 'categories/fan-shop')]", "xpath:href"],
+        ["xpath=//li[9]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Jerseys & Fan Wear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3b5a32f1-b80d-4c51-834a-2a01b340f196",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,16724)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "894487da-8c0d-4f81-ba6f-2add066e9b40",
+      "comment": "Assert the Customer Service Heaher is present in the site nav",
+      "command": "assertText",
+      "target": "css=.customerServiceLinks .footer-section__head",
+      "targets": [
+        ["css=.customerServiceLinks .footer-section__head", "css:finder"],
+        ["xpath=//div[4]/div/div/p", "xpath:position"]
+      ],
+      "value": "CUSTOMER SERVICE"
+    }, {
+      "id": "e8bfaf8a-6c28-4c6d-b63d-d648fecbbcd2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Online Customer Service",
+      "targets": [
+        ["linkText=Online Customer Service", "linkText"],
+        ["css=.customerServiceLinks .footer-section__menu-link:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Online Customer Service')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'help-desk/online-store-information/contact-us.html')]", "xpath:href"],
+        ["xpath=//div[3]/div[4]/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Online Customer Service')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2eeed4d4-9a40-47bd-bfce-8e1b16a4744d",
+      "comment": "Check that the Online Store Information page header is present",
+      "command": "assertText",
+      "target": "css=.global-page-header__title",
+      "targets": [
+        ["css=.global-page-header__title", "css:finder"],
+        ["xpath=//main[@id='main-content']/div/div/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"]
+      ],
+      "value": "ONLINE STORE INFORMATION"
+    }, {
+      "id": "0deb53a6-ba05-4e72-b709-998b3689f1ce",
+      "comment": "Check that the 'Contact Us' header is present",
+      "command": "assertText",
+      "target": "css=.section-header__title",
+      "targets": [
+        ["css=.section-header__title", "css:finder"],
+        ["xpath=//main[@id='main-content']/div[2]/div/div/div/h2", "xpath:idRelative"],
+        ["xpath=//div/div/div/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Contact Us')]", "xpath:innerText"]
+      ],
+      "value": "Contact Us"
+    }, {
+      "id": "26ee6f83-2ed6-4649-96b5-c36adc2c2d74",
+      "comment": "Assert Submit Form Button is present",
+      "command": "assertElementPresent",
+      "target": "css=.contact-us__button_show-form",
+      "targets": [
+        ["css=.contact-us__button_show-form", "css:finder"],
+        ["xpath=//main[@id='main-content']/div[2]/div/div/div[2]/div/section/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//section/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "264326c3-1e80-48c5-93f2-396f83aaf2e1",
+    "name": "trangleRewards",
+    "commands": [{
+      "id": "de8697d8-813c-4166-96e5-c80c07ba3cd2",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.sportchek.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "65a264e3-1a59-4a0d-9f1d-fc8bec6b079d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1595x923",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "40b71124-5471-43fe-9e73-2c79b77cc65f",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.spo-meganav-item > .main-menu__text",
+      "targets": [
+        ["css=.spo-meganav-item > .main-menu__text", "css:finder"],
+        ["xpath=//li[12]/a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Deals & Features')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d788742-9c53-4164-a398-240a957f5a54",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.spo-meganav-item > .main-menu__text",
+      "targets": [
+        ["css=.spo-meganav-item > .main-menu__text", "css:finder"],
+        ["xpath=//li[12]/a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Deals & Features')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b800e5f9-7f47-4185-89d6-2a965709c914",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.full-image__img > img",
+      "targets": [
+        ["css=.full-image__img > img", "css:finder"],
+        ["xpath=//img[@alt='Big Chek Event. Doorcrashers up to 60% Off* our regular price. Select brands & styles. Shop Now.']", "xpath:img"],
+        ["xpath=//main[@id='main-content']/div/div/div/a/span/picture/img", "xpath:idRelative"],
+        ["xpath=//picture/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c06693e-5e59-4637-909b-e034ad37fe31",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.full-image__img > img",
+      "targets": [
+        ["css=.full-image__img > img", "css:finder"],
+        ["xpath=//img[@alt='Big Chek Event. Doorcrashers up to 60% Off* our regular price. Select brands & styles. Shop Now.']", "xpath:img"],
+        ["xpath=//main[@id='main-content']/div/div[2]/div/a/span/picture/img", "xpath:idRelative"],
+        ["xpath=//picture/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "951674e2-a3c1-40e2-bac5-47960afe91f7",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.full-image__img > img",
+      "targets": [
+        ["css=.full-image__img > img", "css:finder"],
+        ["xpath=//img[@alt='Big Chek Event. Doorcrashers up to 60% Off* our regular price. Select brands & styles. Shop Now.']", "xpath:img"],
+        ["xpath=//main[@id='main-content']/div/div[2]/div/a/span/picture/img", "xpath:idRelative"],
+        ["xpath=//picture/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d751d18-a04b-466b-8635-ae38b1fc44f8",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.full-image__img > img",
+      "targets": [
+        ["css=.full-image__img > img", "css:finder"],
+        ["xpath=//img[@alt='Big Chek Event. Doorcrashers up to 60% Off* our regular price. Select brands & styles. Shop Now.']", "xpath:img"],
+        ["xpath=//main[@id='main-content']/div/div[2]/div/a/span/picture/img", "xpath:idRelative"],
+        ["xpath=//picture/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9789cd77-2c78-428f-906e-c79ccaf7447d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.enterprise-header__section:nth-child(2) font",
+      "targets": [
+        ["css=.enterprise-header__section:nth-child(2) font", "css:finder"],
+        ["xpath=//div[2]/div/div/a/font", "xpath:position"],
+        ["xpath=//font[contains(.,'Triangle Rewards')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8edd22f6-b6b1-4865-849f-008f36a37abd",
+      "comment": "Assert that the Triangle reewards Image is present",
+      "command": "assertText",
+      "target": "css=span > .module-font-32",
+      "targets": [],
+      "value": "Redeem anytime, any amount at our great Brands."
+    }, {
+      "id": "8cfde3f1-8f62-40fa-9e6f-8f45bebf1f91",
+      "comment": "",
+      "command": "click",
+      "target": "css=#content_triangle-site_en_rewards-cards_jcr-content_content-paragraph_column-control-402686446_column-0-content_banner-builder b",
+      "targets": [
+        ["css=#content_triangle-site_en_rewards-cards_jcr-content_content-paragraph_column-control-402686446_column-0-content_banner-builder b", "css:finder"],
+        ["xpath=//div[@id='content_triangle-site_en_rewards-cards_jcr-content_content-paragraph_column-control-402686446_column-0-content_banner-builder']/div/a/div[2]/div/div/div/font/b", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/font/b", "xpath:position"],
+        ["xpath=//b[contains(.,'JOIN NOW')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b711a9dc-ce93-4c86-a239-9ec209867aa7",
+      "comment": "Assert that the Create Account Button is present in the dialog that pops up",
+      "command": "assertElementPresent",
+      "target": "css=#register-site-login .gigya-input-submit",
+      "targets": [
+        ["css=#register-site-login .gigya-input-submit", "css:finder"],
+        ["xpath=//input[@value='Create Account']", "xpath:attributes"],
+        ["xpath=//div[@id='register-site-login']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "7f2e7172-1a07-46c1-8b4a-ca0865dd6acb",
+    "name": "invalidSignInNoInput",
+    "commands": [{
+      "id": "b5dff9fe-3a8b-48e3-a061-9ac7f1e860a6",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.sportchek.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "66f1e6dd-f310-42ba-8317-592a347db314",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1595x921",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "60464376-e243-4832-8a2b-5bb13b1ef643",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=headerPickupStoreName",
+      "targets": [
+        ["id=headerPickupStoreName", "id"],
+        ["css=#headerPickupStoreName", "css:finder"],
+        ["xpath=//span[@id='headerPickupStoreName']", "xpath:attributes"],
+        ["xpath=//div[@id='header-pickup-store-widget']/a/span[3]", "xpath:idRelative"],
+        ["xpath=//a/span[3]", "xpath:position"],
+        ["xpath=//span[contains(.,'Southtrail Crossing Sport Chek')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "808ba4ed-ec94-45a6-a9c3-f48c90cff92c",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=headerPickupStoreName",
+      "targets": [
+        ["id=headerPickupStoreName", "id"],
+        ["css=#headerPickupStoreName", "css:finder"],
+        ["xpath=//span[@id='headerPickupStoreName']", "xpath:attributes"],
+        ["xpath=//div[@id='header-pickup-store-widget']/a/span[3]", "xpath:idRelative"],
+        ["xpath=//a/span[3]", "xpath:position"],
+        ["xpath=//span[contains(.,'Southtrail Crossing Sport Chek')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4bb331b2-478e-4f36-9969-2f6b2fc02193",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.header-pickup-store__link-container",
+      "targets": [
+        ["css=.header-pickup-store__link-container", "css:finder"],
+        ["xpath=//div[@id='header-pickup-store-widget']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[6]", "xpath:href"],
+        ["xpath=//div[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Your Store:\nSouthtrail Crossing Sport Chek')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "588ade13-de65-49ae-ad75-dc607de5f7c3",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.header-pickup-store__link-container",
+      "targets": [
+        ["css=.header-pickup-store__link-container", "css:finder"],
+        ["xpath=//div[@id='header-pickup-store-widget']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[6]", "xpath:href"],
+        ["xpath=//div[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Your Store:\nSouthtrail Crossing Sport Chek')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "403260d8-a4f7-4573-a229-4ea3ffd13e10",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.header-cart__text",
+      "targets": [
+        ["css=.header-cart__text", "css:finder"],
+        ["xpath=//div[6]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c294178c-c472-4528-b1e5-55255bbcdb8f",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.header-cart__text",
+      "targets": [
+        ["css=.header-cart__text", "css:finder"],
+        ["xpath=//div[6]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "28a87d05-e073-4dab-8adb-f35d627fbfee",
+      "comment": "",
+      "command": "click",
+      "target": "css=.enterprise-account__button_sign-in",
+      "targets": [
+        ["css=.enterprise-account__button_sign-in", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b9334edf-e6c3-4c49-97ab-e28c2e2cc5c0",
+      "comment": "Check to see if the Sign In page header is visible on the page",
+      "command": "assertText",
+      "target": "css=#gigya-login-form .gigya-composite-control-header",
+      "targets": [
+        ["css=#gigya-login-form .gigya-composite-control-header", "css:finder"],
+        ["xpath=//form[@id='gigya-login-form']/div[2]/div[3]/h2", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/div[2]/div[3]/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Triangle ID Sign In')]", "xpath:innerText"]
+      ],
+      "value": "Triangle ID Sign In"
+    }, {
+      "id": "03c019ef-f97c-4c31-bced-beacc5c372f8",
+      "comment": "",
+      "command": "click",
+      "target": "css=#gigya-login-form .gigya-input-text",
+      "targets": [
+        ["css=#gigya-login-form .gigya-input-text", "css:finder"],
+        ["xpath=(//input[@name='username'])[4]", "xpath:attributes"],
+        ["xpath=//form[@id='gigya-login-form']/div[2]/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/div[2]/div[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ce270c4-7ff8-4c1d-9945-5c44ed07d80b",
+      "comment": "",
+      "command": "click",
+      "target": "css=#gigya-login-form .gigya-composite-control-submit > .gigya-input-submit",
+      "targets": [
+        ["css=#gigya-login-form .gigya-composite-control-submit > .gigya-input-submit", "css:finder"],
+        ["xpath=//input[@value='SIGN IN']", "xpath:attributes"],
+        ["xpath=//form[@id='gigya-login-form']/div[2]/div[3]/div[5]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/div[2]/div[3]/div[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6534e0aa-d3d6-4cde-acd5-1d6a595a45fe",
+      "comment": "Check that error message pops up letting user know that an password must be inputted",
+      "command": "assertText",
+      "target": "css=.gigya-error-msg:nth-child(3)",
+      "targets": [
+        ["css=.gigya-error-msg:nth-child(3)", "css:finder"],
+        ["xpath=//form[@id='gigya-login-form']/div[2]/div[3]/div[2]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/span[2]", "xpath:position"]
+      ],
+      "value": "This field is required."
+    }, {
+      "id": "abdd3c62-2f54-49b3-9364-b2b170bcbf1b",
+      "comment": "Check that error message pops up letting user know that an email must be inputted",
+      "command": "assertText",
+      "target": "css=.gigya-error-msg-active",
+      "targets": [
+        ["css=.gigya-error-msg-active", "css:finder"],
+        ["xpath=//form[@id='gigya-login-form']/div[2]/div[3]/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/div[2]/div[3]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'This field is required.')]", "xpath:innerText"]
+      ],
+      "value": "This field is required."
+    }, {
+      "id": "3993e9cb-d0fe-4336-8ef5-d2d978c3424a",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#gigya-login-form .gigya-composite-control-submit > .gigya-input-submit",
+      "targets": [
+        ["css=#gigya-login-form .gigya-composite-control-submit > .gigya-input-submit", "css:finder"],
+        ["xpath=//input[@value='SIGN IN']", "xpath:attributes"],
+        ["xpath=//form[@id='gigya-login-form']/div[2]/div[3]/div[5]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/div[2]/div[3]/div[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2016e9c3-0dcb-4513-b366-9f6dfe1db489",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=#gigya-login-form .gigya-composite-control-submit > .gigya-input-submit",
+      "targets": [
+        ["css=#gigya-login-form .gigya-composite-control-submit > .gigya-input-submit", "css:finder"],
+        ["xpath=//input[@value='SIGN IN']", "xpath:attributes"],
+        ["xpath=//form[@id='gigya-login-form']/div[2]/div[3]/div[5]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/form/div[2]/div[3]/div[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9d85ade3-c3bf-41f9-8f2b-2afee1e552e9",
+    "name": "RegisterAccountNoInput",
+    "commands": [{
+      "id": "f6d84755-e2f9-42ed-8257-97c595c399e5",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.sportchek.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6659ecf2-ec49-49e0-82df-2f469afe953a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1595x923",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf9c70a0-30b0-4a86-b15c-99417e20356c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.enterprise-account__button_register",
+      "targets": [
+        ["css=.enterprise-account__button_register", "css:finder"],
+        ["xpath=//li[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Register')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1bad3230-fa65-49b3-a019-5403a50da54a",
+      "comment": "Assert the Create Truangle ID is present",
+      "command": "assertText",
+      "target": "css=.gigya-container-enabled > .gigya-composite-control-header",
+      "targets": [
+        ["css=.gigya-container-enabled > .gigya-composite-control-header", "css:finder"],
+        ["xpath=//form[@id='gigya-register-form']/div/div/h2", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/div/div/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Create Your Triangle ID')]", "xpath:innerText"]
+      ],
+      "value": "Create Your Triangle ID"
+    }, {
+      "id": "4ee374eb-7c62-43c4-a526-4a9e3da8a2d1",
+      "comment": "",
+      "command": "click",
+      "target": "css=#register-site-login .gigya-input-submit",
+      "targets": [
+        ["css=#register-site-login .gigya-input-submit", "css:finder"],
+        ["xpath=//input[@value='CREATE TRIANGLE ID']", "xpath:attributes"],
+        ["xpath=//div[@id='register-site-login']/div[10]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/div[2]/div[3]/div[10]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bb0dcfb1-75e3-46cd-a838-53ad91d6e1f8",
+      "comment": "Assert that the email errormessage is present",
+      "command": "assertText",
+      "target": "id=__gig_template_element_3_1647548856839",
+      "targets": [
+        ["id=__gig_template_element_3_1647548856839", "id"],
+        ["css=#\\__gig_template_element_3_1647548856839", "css:finder"],
+        ["xpath=//span[@id='__gig_template_element_3_1647548856839']", "xpath:attributes"],
+        ["xpath=//div[@id='register-site-login']/div[2]/div/div/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/div[2]/div[3]/div[2]/div/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'This field is required.')]", "xpath:innerText"]
+      ],
+      "value": "This field is required."
+    }, {
+      "id": "9936aa8c-f0a2-4dd8-ac49-eb406f829fd3",
+      "comment": "Assert that the Password error message is present",
+      "command": "assertText",
+      "target": "css=.pwd-cxty-val-err-msg",
+      "targets": [
+        ["css=.pwd-cxty-val-err-msg", "css:finder"],
+        ["xpath=//div[@id='password-row']/div/div/span[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Password field is required.')]", "xpath:innerText"]
+      ],
+      "value": "Password field is required."
+    }]
+  }],
+  "suites": [{
+    "id": "09da3bc7-c76f-4f18-8347-c24271b5e807",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["6898af86-e67b-4c85-84d4-ed01c88e5e37"]
+  }],
+  "urls": ["https://www.sportchek.ca/", "https://www.sportchek.ca/categories/fan-shop/nhl/seattle-kraken.html", "https://www.sportchek.ca/shopping-cart.html", "https://www.sportchek.ca/registration.html?resource=%2F"],
+  "plugins": []
+}
