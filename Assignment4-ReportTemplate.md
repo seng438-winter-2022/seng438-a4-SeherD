@@ -17,8 +17,11 @@ The purpose of this lab was for the group to gain knowledge in the area of mutat
 **Mutation of line 91 number 5:** 
 
 Negated double local variable number 1 -> SURVIVED.
+
 This mutation involves the constructor function of class Range, and has survived. The line currently reads: 
+
 String msg = “Range(double, double): require lower (“ + lower …
+
 This ‘msg’ is a string that is returned as an IllegalArgumentException. Although we have a test case that enters this branch and expects an illegal argument exception to be thrown, it does not check the message of the exception, so if an exception is thrown with a different message than expected (negative val instead of positive val), then the test case will still pass, thus the mutant will survive.
 
 **Mutation of line 95 number 4:** 
