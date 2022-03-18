@@ -10,18 +10,15 @@
 |                 |   |
 
 ## Introduction
-
+The purpose of this lab was for the group to gain knowledge in the area of mutation testing, as well as GUI testing. By enhancing our test suites from assignment three with a focus on adding more thorough mutation coverage, we developed a comprehensive set of tests for the methods in the Range Class and Data Utilities Class. The use of mutation testing with the help of Pitclipse combined with the GUI testing of a website using Selenium was a great way to gain experience. Each section of the lab allowed the team to refine their skills in the design, development, and execution of tests. Lastly, it helped us evaluate the quality of the tests written.
 
 ## Analysis of 10 Mutants of the Range Class
 
 **Mutation of line 91 number 5:** 
 
 Negated double local variable number 1 -> SURVIVED.
-
 This mutation involves the constructor function of class Range, and has survived. The line currently reads: 
-
 String msg = “Range(double, double): require lower (“ + lower …
-
 This ‘msg’ is a string that is returned as an IllegalArgumentException. Although we have a test case that enters this branch and expects an illegal argument exception to be thrown, it does not check the message of the exception, so if an exception is thrown with a different message than expected (negative val instead of positive val), then the test case will still pass, thus the mutant will survive.
 
 **Mutation of line 95 number 4:** 
@@ -307,8 +304,7 @@ Test 12: invalidSignInNoInput. This test is the same as Test 11, only that none 
 Test 13: triangleRewards,  ensures that the user is able to access the Triangle Rewards page upon clicking on the “Triangle rewards” button and then asserts that the user is able to click the Join Now button to then be asked to create an account. This is done by first asserting that the page header message is present below the Join Now Button, then the test clicks the join now button and asserts the “Create Account button is present in the pop up dialog. There only needs to be a single test for this since there are not multiple ways to click a link.
 
 
-## 
-Explain the use of assertions and checkpoints
+## Explain the use of assertions and checkpoints
 
 Asserts in Selenium are used to validate the test cases. They helped us understand if tests have passed or failed, and why this was the case. We used asserts and checkpoints throughout the test process to ensure our tests are running smoothly. Statements commonly used include assertExist that certain web elements exist to make sure the user can interact with them. This included buttons, text fields, and checkboxes. It was an easy way to ensure the process flow could continue as expected. We also used assertText to confirm actions such as successfully signing in, or joining mailing lists, because text was promoted to the user in these cases indicating confirmation, so we could assert that operations occurred smoothly. 
 
@@ -323,14 +319,12 @@ Because of the nature of the web environment, we were able to run every test wit
 In terms of simplicity and convenience, there’s no doubt that Selenium is far more superior.  Selenium is an extension on not only google chrome, but firefox as well, making it very easy to access, where Sikulix come as a downloaded jar file that requires a certain Java version, meaning the user needs to download other things in order to use the ide, where Selenium does not need anything other than Chrome or FireFox. Selenium also just looks visually better.  In terms of features, Selenium has a much more dynamic scale of speed at which you can run your tests, making debugging easier. On the other hand Sikulix only has two speeds that you can run your tests at.  The main reason why Selenium is a far better IDE than Sikulix is that you are able to record actions in Selenium, where you have to take screenshots in Sikulix which we believe is not at all practical.
 
 
-## 
-How the team work/effort was divided and managed?
+## How the team work/effort was divided and managed?
 
 Each group member participated in creating their own unique mutation tests, and GUI test. We worked collaboratively to ensure tests were complete, accurate, and did not overlap with each other. This led to a successful increase in mutation coverage, as well as thorough testing of many important functions of the SportCheck website. 
 
 
-## 
-Difficulties encountered, challenges overcome, and lessons learned.
+## Difficulties encountered, challenges overcome, and lessons learned.
 
 Piclipse only ran on one machine, so we had to each develop our own mutation test and send it to the person who could run them for testing. During the mutation testing, nothing was working because packages were missing from the Artifacts as well; one of the links to demo how selenium works was returning a 404 error. We didn't find the picclipse very user friendly, and our tests took about 15 mins to run for each one. On the GUI side, once we got Selenium working, it was a lot more intuitive, and the test design process was much more straightforward. 
 
