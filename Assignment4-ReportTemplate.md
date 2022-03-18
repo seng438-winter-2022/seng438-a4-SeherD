@@ -123,39 +123,13 @@ Since ‘result’ is an integer created inside of the function, and this is the
 
 After running PITEST on the original test suite from Assignment 3, we got the following metrics from the PITEST summary:
 
-
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image1.png "image_tooltip")
-
-
-
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image2.png "image_tooltip")
-
+![test](https://user-images.githubusercontent.com/62816561/159018089-de9c9819-36df-49cf-94e9-351ce851dc6d.png)
+![test4](https://user-images.githubusercontent.com/62816561/159018116-31951179-94b5-4f56-9fcb-1f9ad58350ee.png)
 
 After we wrote our test cases to kill some of the mutants that had survived, we managed to increase our mutant coverage significantly.
 
-
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image3.png "image_tooltip")
-
-
-
-
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image4.png "image_tooltip")
-	
+![test2](https://user-images.githubusercontent.com/62816561/159018026-186a2ff1-30e6-48d7-bc0c-1a153187d244.png)
+![test3](https://user-images.githubusercontent.com/62816561/159018049-8050af22-483d-4dc8-a637-89db59717d00.png)
 
 
 ## A discussion on the effect of equivalent mutants on mutation score accuracy, as well as a discussion on a possible way to detect equivalent mutations
@@ -166,100 +140,81 @@ Our group spent time discussing how we could potentially detect equivalent mutat
 
 **List of equivalent mutations we found manually:**
 
-Line 84 of DataUtilities:
+**Line 84 of DataUtilities:**
 
 for(int i = 0; i&lt;a.length; i++)
 -> 
-
 for(int i = 0; i!=a.length; i++)
 
-line 105 of DataUtilities:
+**line 105 of DataUtilities:**
 
 for(int i = 0; i &lt; source.length; i++)
-
 ->
-
 for(int i = 0; i != source.length; i++)
 
-line 127 of DataUtilities:
+**line 127 of DataUtilities:**
 
 for(int r = 0; r &lt; rowCount; i++)
-
 ->
-
 for(int r = 0; r != rowCount; i++)
 
-line 153 of DataUtilities:
+**line 153 of DataUtilities:**
 
 for(int v = 0; v &lt; validRows.length; i++)
-
 ->
-
 for(int v = 0; v != validRows.length; i++)
 
-line 178 of DataUtilities:
+**line 178 of DataUtilities:**
 
 for(int c = 0; c &lt; columnCount; i++)
-
 ->
-
 for(int c = 0; c != columnCount; i++)
 
-Line 204 of DataUtilities:
+**Line 204 of DataUtilities:**
 
 for (int v = 0; v &lt; validCols.length; v++)
-
 ->
-
 for (int v = 0; v != validCols.length; v++)
 
-Line 227 of DataUtilities:
+**Line 227 of DataUtilities:**
 
 for (int i = 0; i &lt; data.length; i++)
-
 ->
-
 for (int i = 0; i != data.length; i++)
 
-Line 245 of DataUtilities:
+**Line 245 of DataUtilities:**
 
 for (int i = 0; i &lt; l1; i++)
-
 ->
-
 for (int i = 0; i != l1; i++)
 
-Line 265 of DataUtilities:
+**Line 265 of DataUtilities:**
 
 for (int i = 0; i &lt; data.getItemCount(); i++)
-
 ->
-
 for (int i = 0; i != data.getItemCount(); i++)
 
-Line 272 of DataUtilities:
+**Line 272 of DataUtilities:**
 
 for (int i = 0; i &lt; data.getItemCount(); i++)
-
 ->
-
 for (int i = 0; i != data.getItemCount(); i++)
 
 
 ## A discussion of what was done to improve the mutation score of the test suite
 
-We had significantly lower mutant coverage than expected originally, given our line coverage. A lot of our test cases expected a return value of 0, so all mutants that changed lines like ‘return val1 - val2’ to ‘return val1 * val2’ survived. Fixing this problem was simple, as we only had to modify existing test cases to input values other than zero and expect values other than zero. Making these changes was the first step of our improvement plan, and increased our mutant coverage significantly.
+We had significantly lower mutant coverage than expected originally, given our line coverage. A main reason for this was that a lot of our test cases expected a return value of 0, so all mutants that changed lines like ‘return val1 - val2’ to ‘return val1 * val2’ survived. Fixing this problem was simple, as we only had to modify existing test cases to input values other than zero and expect values other than zero. Making these changes was the first step of our improvement plan, and increased our mutant coverage significantly.
 
-Secondly, we went through each line and considered each mutant individually, and wrote a test case that would ‘kill’ it. Oftentimes, one test case would kill multiple mutants that had survived, because either a branch or function had been ignored completely by our original test suite. We found it prudent as we were killing ‘survived’ mutants to ignore ones that we found confusing. Pitclipse often created mutants for lines that didn’t make a whole lot of sense. Some of them were ‘killed’, and we didn’t understand why, and some ‘survived’, to our confusion. For example: ‘431 4. Substituted 0 with 1 → SURVIVED. This mutant references a returned boolean value. We assumed that ‘0’ meant false, and ‘1’ meant true, but we had written a test case that would have certainly killed this mutant. We decided trying to figure out the pitclipse syntax was not worth our while, as we were already able to increase our mutant coverage by 10% before considering cases like these. 
+Secondly, we went through each line and considered each mutant individually, and wrote a test case that would ‘kill’ it. Oftentimes, one test case would kill multiple mutants that had survived, because either a branch or function had been ignored completely by our original test suite. We found it prudent as we were killing ‘survived’ mutants to ignore ones that we found confusing. Pitclipse often created mutants for lines that didn’t make a whole lot of sense. Some of them were ‘killed’, and we didn’t understand why, and some ‘survived’, to our confusion. For example: ‘431 4. Substituted 0 with 1 → SURVIVED. This mutant references a returned boolean value. We assumed that ‘0’ meant false, and ‘1’ meant true, but we had written a test case that would have certainly killed this mutant. We decided trying to figure out the pitclipse syntax was not worth our while, as we were already able to increase our mutant coverage by 10% before considering cases like these.
+
+Lastly, we ran into a significant execution time problem when running Pitclipse. Each mutation test run took over 20 minutes, so it was impractical to run Pitclipse after every new test case we developed. Oftentimes, instead of running Pitclipse, we went and modified the source code with a specific mutation to see if our new test case would fail with it. If our new test case did fail, this would mean that the associated mutation would be killed in a new run of Pitclipse. After completing all of our new test cases, we did a final run of Pitclipse to confirm the results, which turned out as expected.
 
 
 ## Why do we need mutation testing ? Advantages and disadvantages of mutation testing
 
-Mutation testing is a form of white-box testing. The purpose is to help the tester develop effective tests or locate weaknesses in the test data used for the program or in sections of the code that are seldom or never accessed during execution. 
+Mutation testing is a form of white-box testing. The purpose is to help the tester develop effective tests or locate weaknesses in the test data used for the program or in sections of the code that are seldom or never accessed during execution.
 
 **Advantages:**
-
-
 
 * The ability to ensure the identification of weak tests or code.
 * Has a high level of error detection.
@@ -267,8 +222,6 @@ Mutation testing is a form of white-box testing. The purpose is to help the test
 * Mutation scores can give organizations an idea of how useful their testing suite is.
 
 **Disadvantages:**
-
-
 
 * The large number of mutants used to test a test suite can lead to a potentially confusing experience in testing each version, which may reduce mutation testing’s practicality without automation.
 * Because of the large number of mutants being tested, mutation testing can be time-consuming and pricey.
@@ -293,32 +246,32 @@ Test 6: SetStoreCalgary, this test ensures that users can set their preferred Sp
 
 Test 7: SetStoreToronto, this test ensures that users can set their preferred SportCheck to a Toronto location to make it easy for them to see stock levels at that selected store. It asserts that a valid postal code can be entered to filter store locations, and that it returns results based only on locations near that postal code. Lastly, an assertExist is made to ensure that once returned from a list, the user can easily select their preferred store. 
 
-Test 8: registerAccontNoInput, ensures that the user is able to access the create account page upon clicking on the ‘register’ button and also tests the error checking of the create account input form, specifically when the user does not input anything. Firstly, it asserts the create account page has popped up by asserting the presence of the page header “Create your Triangle ID”.  Then after clicking the Create account button on the page after not inputting text in any of the fields, the error messages are asserted to be present. It is obvious that there can be various inputs for this test, however, anytime a ‘type’ command is made inside the input fields on the create account page, the test fails at that command, so it is impossible to test any input other than no input.
+Test 8: registerAccontNoInput, ensures that the user is able to access the 'create account page' upon clicking on the ‘register’ button and also tests the error checking of the create account input form, specifically when the user does not input anything. Firstly, it asserts the create account page has popped up by asserting the presence of the page header “Create your Triangle ID”.  Then after clicking the Create account button on the page after not inputting text in any of the fields, the error messages are asserted to be present. It is obvious that there can be various inputs for this test, however, anytime a ‘type’ command is made inside the input fields on the create account page, the test fails at that command, so it is impossible to test any input other than no input.
 
 Test 9: customerServiceLink, This ensures that the user is able to access the customer service page from clicking on the link at the bottom of the home page. Since the user must scroll to the very bottom of the home page,  the test asserts that the bottom is reached by asserting the presence of some components, specifically the “Customer Service” Header, since its located nowhere else on the page. After the link is clicked, teh Customer service page is asserted to be visible by asserting that the Online Store Information page header is present and that the “Contact Us” Page header is present. There only needs to be a single test for this since there are not multiple ways to click a link.
 
 Test 10: HomePageLogo, asserts that the user is able to navigate back to the home page,  by clicking  on the sport chek logo in the top left corner of the page. This is asserted by constructing a test case that can start on different pages and click on the logo in the top left corner of the page. Tes test then checks that the home page has been reached by asserting that the logo in the top left corner is present, the Under Armor advertisement is present, and lastly that the “woman” toolbar button is present.
 
-Test 11: invalidSignInNoEmail,  ensures that the user is able to access the sign in page upon clicking on the “Sign In” button and also tests the error checking of the create account input form, specifically when the user does not input an email in the email field. Firstly, it asserts the sign page has popped up by asserting the presence of the page header “Triangle ID Sign In”.  Then after clicking the “Sign In” button on the page after not inputting an email in the email field, the error messages are asserted to be present, more specifically, the message “This field is required”.
+Test 11: invalidSignInNoEmail, ensures that the user is able to access the sign in page upon clicking on the “Sign In” button and also tests the error checking of the create account input form, specifically when the user does not input an email in the email field. Firstly, it asserts the sign page has popped up by asserting the presence of the page header “Triangle ID Sign In”.  Then after clicking the “Sign In” button on the page after not inputting an email in the email field, the error messages are asserted to be present, more specifically, the message “This field is required”.
 
 Test 12: invalidSignInNoInput. This test is the same as Test 11, only that none of the input fields were filled. Since the password input field was not filled the test asserts the error message below the password field “This field is required”.
 
-Test 13: triangleRewards,  ensures that the user is able to access the Triangle Rewards page upon clicking on the “Triangle rewards” button and then asserts that the user is able to click the Join Now button to then be asked to create an account. This is done by first asserting that the page header message is present below the Join Now Button, then the test clicks the join now button and asserts the “Create Account button is present in the pop up dialog. There only needs to be a single test for this since there are not multiple ways to click a link.
+Test 13: triangleRewards, ensures that the user is able to access the Triangle Rewards page upon clicking on the “Triangle rewards” button and then asserts that the user is able to click the Join Now button to then be asked to create an account. This is done by first asserting that the page header message is present below the Join Now Button, then the test clicks the join now button and asserts the “Create Account button is present in the pop up dialog. There only needs to be a single test for this since there are not multiple ways to click a link.
 
 
 ## Explain the use of assertions and checkpoints
 
-Asserts in Selenium are used to validate the test cases. They helped us understand if tests have passed or failed, and why this was the case. We used asserts and checkpoints throughout the test process to ensure our tests are running smoothly. Statements commonly used include assertExist that certain web elements exist to make sure the user can interact with them. This included buttons, text fields, and checkboxes. It was an easy way to ensure the process flow could continue as expected. We also used assertText to confirm actions such as successfully signing in, or joining mailing lists, because text was promoted to the user in these cases indicating confirmation, so we could assert that operations occurred smoothly. 
+Asserts in Selenium are used to validate the test cases. Using them helped us understand whether tests had passed or failed, and why this was the case. We used asserts and checkpoints throughout the test process to ensure our tests are running smoothly. Statements commonly used include assertExist that certain web elements exist to make sure the user can interact with them. This included buttons, text fields, and checkboxes. It was an easy way to ensure the process flow could continue as expected. We also used assertText to confirm actions such as successfully signing in, or joining mailing lists, because text was promoted to the user in these cases indicating confirmation, so we could assert that operations occurred smoothly.
 
 
 ## How did you test each functionality with different test data?
 
-Because of the nature of the web environment, we were able to run every test with multiple different data types. For instance, adding items to cart could be done with thousands of items that SportCheck offered, selecting stores could be done by entering any postal code in Canada, and item catalogs could be searched with any parameter types. We used this to our advantage to develop wholesome test suites, testing the same actions with different test data to ensure robustness. While the test functionality that was being tested was the same as well as the associated process, the ways in which the system was interacted was tested with different data. 
+Because of the nature of the web environment, we were able to run every test with multiple data types. For instance, adding items to cart could be done with any of the thousands of items that SportCheck offered. Selecting a store to order from could be done by entering any postal code in Canada. Item catalogs could be searched with any parameter types. We used the wide variety of possible input to our advantage to develop wholesome test suites, testing the same actions with different test data to ensure robustness. While the test functionality that was being tested was the same in each case, the ways in which the site was interacted with was tested with changed with different data. 
 
 
 ## Discuss advantages and disadvantages of Selenium vs. Sikulix
 
-In terms of simplicity and convenience, there’s no doubt that Selenium is far more superior.  Selenium is an extension on not only google chrome, but firefox as well, making it very easy to access, where Sikulix come as a downloaded jar file that requires a certain Java version, meaning the user needs to download other things in order to use the ide, where Selenium does not need anything other than Chrome or FireFox. Selenium also just looks visually better.  In terms of features, Selenium has a much more dynamic scale of speed at which you can run your tests, making debugging easier. On the other hand Sikulix only has two speeds that you can run your tests at.  The main reason why Selenium is a far better IDE than Sikulix is that you are able to record actions in Selenium, where you have to take screenshots in Sikulix which we believe is not at all practical.
+In terms of simplicity and convenience, there’s no doubt that Selenium is far superior to Sikulix. Selenium is an extension that is available for not only google chrome, but Firefox as well, making it very accessible. Sikulix comes as a downloadable jar file that requires a certain Java version, meaning the user needs to download other things in order to use the ID. In contrast, Selenium does not need anything other than Chrome or FireFox. Selenium is also more visually appealing and more user-intuitive. In terms of features, Selenium has a much more dynamic scale of speed at which you can run your tests, making debugging easier. On the other hand, Sikulix has only two speeds that you can run your tests at.The main reason why Selenium is better IDE than Sikulix is that you are able to record actions in Selenium, whereas you have to take screenshots in Sikulix which we believe is not at all practical.
 
 
 ## How the team work/effort was divided and managed?
@@ -328,7 +281,7 @@ Each group member participated in creating their own unique mutation tests, and 
 
 ## Difficulties encountered, challenges overcome, and lessons learned.
 
-Piclipse only ran on one machine, so we had to each develop our own mutation test and send it to the person who could run them for testing. During the mutation testing, nothing was working because packages were missing from the Artifacts as well; one of the links to demo how selenium works was returning a 404 error. We didn't find the picclipse very user friendly, and our tests took about 15 mins to run for each one. On the GUI side, once we got Selenium working, it was a lot more intuitive, and the test design process was much more straightforward. 
+After extensive effort and communication with the TAs, Piclipse only able to run on one machine, so we had to each develop our own mutation test and send it to the one person who could actually run them for testing. During the mutation testing, nothing was working because packages were missing from the Artifacts as well. In addition to this, one of the links to demo how selenium works was returning a 404 error. We didn't find the Pitclipse user interface very friendly, and our tests took about 15 mins to run each time. On the GUI side, once we got Selenium working, it was a lot more intuitive, and the test design process was much more straightforward. 
 
 
 ## Comments/feedback on the lab itself
