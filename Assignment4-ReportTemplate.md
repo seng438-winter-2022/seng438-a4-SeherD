@@ -2,7 +2,7 @@
 
 **Lab. Report \#4 – Mutation Testing and Web app testing**
 
-| Group \#:       |   |
+| Group \#:       | 07  |
 |-----------------|---|
 | Student Names:  | Max Botham  |
 |                 | Graydon Benson  |
