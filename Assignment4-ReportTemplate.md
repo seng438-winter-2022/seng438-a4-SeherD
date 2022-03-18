@@ -4,10 +4,10 @@
 
 | Group \#:       |   |
 |-----------------|---|
-| Student Names:  |   |
-|                 |   |
-|                 |   |
-|                 |   |
+| Student Names:  | Max Botham  |
+|                 | Graydon Benson  |
+|                 | Seher Dawar  |
+|                 | Eli St. James  |
 
 ## Introduction
 The purpose of this lab was for the group to gain knowledge in the area of mutation testing, as well as GUI testing. By enhancing our test suites from assignment three with a focus on adding more thorough mutation coverage, we developed a comprehensive set of tests for the methods in the Range Class and Data Utilities Class. The use of mutation testing with the help of Pitclipse combined with the GUI testing of a website using Selenium was a great way to gain experience. Each section of the lab allowed the team to refine their skills in the design, development, and execution of tests. Lastly, it helped us evaluate the quality of the tests written.
